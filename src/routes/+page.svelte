@@ -1,6 +1,8 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
 
+    export const ssr = false;
+
     let counter = $state(0);
     let targetPage = $state("");
 </script>
