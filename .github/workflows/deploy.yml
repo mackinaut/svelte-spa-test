@@ -23,12 +23,12 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
-        run: cd svelte-spa-test && ls && npm run build
+        run: npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'svelte-spa-test/build/'
+          path: 'build/'
 
   deploy:
     needs: build_site

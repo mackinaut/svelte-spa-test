@@ -11,10 +11,7 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
 			fallback: 'index.html'
-		}),
-		paths: {
-			base: process.argv.includes('dev') ? '' : '/svelte-spa-test'
-		}
+		})
 	},
 	vitePlugin: {
 		dynamicCompileOptions: ({ filename }) =>
