@@ -20,7 +20,7 @@ Example for how to run a simple Svelte single-page app (SPA) in GitHub pages.
 
 3. I also did not configure the fallback option.
 
-4. Configure hash-based routing your your config (and update your app to use it as well):
+4. Configure hash-based routing in your config (and update your app to use it as well):
     ```js
     const config = {
         kit: {
@@ -32,6 +32,14 @@ Example for how to run a simple Svelte single-page app (SPA) in GitHub pages.
         },
         ...
     }
+    ```
+
+    ```html
+    <script>
+        import { goto } from "$app/navigation";
+    </script>
+
+    <button onclick={() => goto(`#/page${targetPage}`)}>Goto Page {targetPage}</button>
     ```
 
 5. Add a copy of the `deploy.yml` from the official docs to your repro to trigger the build and deploy whenever you push to the main branch.
