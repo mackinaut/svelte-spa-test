@@ -6,9 +6,6 @@ const config = {
 		paths: {
 			base: process.argv.includes('dev') ? '' : '/svelte-spa-test'
 		},
-		// output: {
-		// 	bundleStrategy: "inline"
-		// },
 		router: {
 			type: "hash"
 		},
